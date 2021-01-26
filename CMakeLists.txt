@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(Boost REQUIRED)
 message(${Boost_INCLUDE_DIRS})
-add_executable(asio_server_test main.cpp)
+add_executable(asio_server_test main.cpp ProxySession.cpp ProxySession.h ProxyAcceptor.cpp ProxyAcceptor.h)
 
 target_link_libraries(asio_server_test PRIVATE pthread)
 target_include_directories(asio_server_test PRIVATE ${Boost_INCLUDE_DIRS})
